@@ -2104,7 +2104,9 @@ var inertia_react_1 = __webpack_require__(/*! @inertiajs/inertia-react */ "./nod
 function Test() {
   return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement(inertia_react_1.Head, {
     title: "Welcome"
-  }), react_1["default"].createElement("h1", null, "Bienvenido"), react_1["default"].createElement("p", null, "Hello, welcome to your first Inertia app!"));
+  }), react_1["default"].createElement("h1", {
+    className: "text-red-500"
+  }, "Bienvenido"), react_1["default"].createElement("p", null, "Hello, welcome to your first Inertia app!"));
 }
 
 exports["default"] = Test;

@@ -1,4 +1,4 @@
-const mix = require('laravel-mix');
+const mix = require('laravel-mix')
 
 /*
  |--------------------------------------------------------------------------
@@ -12,5 +12,11 @@ const mix = require('laravel-mix');
  */
 
 mix.ts('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css')
+    .postCss('resources/css/app.css', 'public/css', [
+        require('tailwindcss')
+    ])
     .react()
+
+if (mix.inProduction()) {
+    mix.version()
+}
