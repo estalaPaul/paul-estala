@@ -2082,31 +2082,31 @@ module.exports = {
 /*!*************************************!*\
   !*** ./resources/js/Pages/Test.tsx ***!
   \*************************************/
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
 
-
-var __importDefault = this && this.__importDefault || function (mod) {
-  return mod && mod.__esModule ? mod : {
-    "default": mod
-  };
-};
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
 
-var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+var jsx_runtime_1 = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 var inertia_react_1 = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 
 function Test() {
-  return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement(inertia_react_1.Head, {
-    title: "Welcome"
-  }), react_1["default"].createElement("h1", {
-    className: "text-red-500"
-  }, "Bienvenido"), react_1["default"].createElement("p", null, "Hello, welcome to your first Inertia app!"));
+  return (0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, {
+    children: [(0, jsx_runtime_1.jsx)(inertia_react_1.Head, {
+      title: "Welcome"
+    }, void 0), (0, jsx_runtime_1.jsx)("h1", Object.assign({
+      className: "text-red-500"
+    }, {
+      children: "Bienvenido"
+    }), void 0), (0, jsx_runtime_1.jsx)("p", {
+      children: "Hello, welcome to your first Inertia app!"
+    }, void 0)]
+  }, void 0);
 }
 
 exports["default"] = Test;
@@ -37675,7 +37675,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Flag the module as loaded
 /******/ 		module.loaded = true;
