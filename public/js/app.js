@@ -2078,14 +2078,20 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Test.tsx":
+/***/ "./resources/js/Pages/Home.tsx":
 /*!*************************************!*\
-  !*** ./resources/js/Pages/Test.tsx ***!
+  !*** ./resources/js/Pages/Home.tsx ***!
   \*************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
 
 Object.defineProperty(exports, "__esModule", ({
   value: true
@@ -2095,8 +2101,10 @@ var jsx_runtime_1 = __webpack_require__(/*! react/jsx-runtime */ "./node_modules
 
 var inertia_react_1 = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 
+var Unauthenticated_1 = __importDefault(__webpack_require__(/*! ./Layouts/Unauthenticated */ "./resources/js/Pages/Layouts/Unauthenticated.tsx"));
+
 function Test() {
-  return (0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, {
+  return (0, jsx_runtime_1.jsxs)(Unauthenticated_1["default"], {
     children: [(0, jsx_runtime_1.jsx)(inertia_react_1.Head, {
       title: "Welcome"
     }, void 0), (0, jsx_runtime_1.jsx)("h1", Object.assign({
@@ -2113,6 +2121,79 @@ exports["default"] = Test;
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Layouts/Components/Navigation.tsx":
+/*!**************************************************************!*\
+  !*** ./resources/js/Pages/Layouts/Components/Navigation.tsx ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var jsx_runtime_1 = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+function Navigation() {
+  var navItems = [{
+    title: 'Projects',
+    path: '/projects'
+  }];
+  return (0, jsx_runtime_1.jsx)("nav", {
+    children: (0, jsx_runtime_1.jsx)("div", Object.assign({
+      className: "flex"
+    }, {
+      children: navItems.map(function (project) {
+        return (0, jsx_runtime_1.jsx)("a", Object.assign({
+          href: project.path
+        }, {
+          children: project.title
+        }), project.path);
+      })
+    }), void 0)
+  }, void 0);
+}
+
+exports["default"] = Navigation;
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Layouts/Unauthenticated.tsx":
+/*!********************************************************!*\
+  !*** ./resources/js/Pages/Layouts/Unauthenticated.tsx ***!
+  \********************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var jsx_runtime_1 = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+var Navigation_1 = __importDefault(__webpack_require__(/*! ./Components/Navigation */ "./resources/js/Pages/Layouts/Components/Navigation.tsx"));
+
+function Unauthenticated(props) {
+  var children = props.children;
+  return (0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, {
+    children: [(0, jsx_runtime_1.jsx)(Navigation_1["default"], {}, void 0), children]
+  }, void 0);
+}
+
+exports["default"] = Unauthenticated;
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -2121,10 +2202,9 @@ exports["default"] = Test;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
@@ -2134,8 +2214,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-
-(0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.createInertiaApp)({
+(0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.createInertiaApp)({
   resolve: function resolve(name) {
     return __webpack_require__("./resources/js/Pages sync recursive ^\\.\\/.*$")("./".concat(name));
   },
@@ -2143,7 +2222,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     var el = _ref.el,
         App = _ref.App,
         props = _ref.props;
-    (0,react_dom__WEBPACK_IMPORTED_MODULE_1__.render)( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(App, _objectSpread({}, props)), el);
+    (0,react_dom__WEBPACK_IMPORTED_MODULE_0__.render)( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(App, _objectSpread({}, props)), el);
   }
 });
 
@@ -37608,8 +37687,12 @@ module.exports = function getSideChannel() {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
-	"./Test": "./resources/js/Pages/Test.tsx",
-	"./Test.tsx": "./resources/js/Pages/Test.tsx"
+	"./Home": "./resources/js/Pages/Home.tsx",
+	"./Home.tsx": "./resources/js/Pages/Home.tsx",
+	"./Layouts/Components/Navigation": "./resources/js/Pages/Layouts/Components/Navigation.tsx",
+	"./Layouts/Components/Navigation.tsx": "./resources/js/Pages/Layouts/Components/Navigation.tsx",
+	"./Layouts/Unauthenticated": "./resources/js/Pages/Layouts/Unauthenticated.tsx",
+	"./Layouts/Unauthenticated.tsx": "./resources/js/Pages/Layouts/Unauthenticated.tsx"
 };
 
 
@@ -37675,7 +37758,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Flag the module as loaded
 /******/ 		module.loaded = true;

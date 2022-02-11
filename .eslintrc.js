@@ -21,23 +21,14 @@ module.exports = {
         '@typescript-eslint'
     ],
     'rules': {
-        'indent': [
-            'error',
-            4
-        ],
-        'linebreak-style': [
-            'error',
-            'unix'
-        ],
-        'quotes': [
-            'error',
-            'single'
-        ],
-        'semi': [
-            'error',
-            'never'
-        ],
+        'indent': ['error', 4],
+        'linebreak-style': ['error', 'unix'],
+        'quotes': ['error', 'single'],
+        'semi': ['error', 'never'],
+        'array-bracket-spacing': ['error', 'always'],
+        'object-curly-spacing': ['error', 'always'],
         'react/jsx-uses-react': 'off',
-        'react/react-in-jsx-scope': 'off'
+        'react/react-in-jsx-scope': 'off',
+        'react/destructuring-assignment': ['error', 'always'],
     }
 }

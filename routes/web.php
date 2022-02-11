@@ -13,4 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::inertia('/', 'Test');
+Route::inertia('/', 'Home')->name('home');
+
+Route::inertia('/projects', 'Home')->name('projects');
+
+Route::inertia('/about', 'Home')->name('about');
+
+Route::inertia('/contact', 'Home')->name('contact');
