@@ -7,3 +7,7 @@ export type ChildrenOnly = {
 export type HomeProps = {
     years: string
 }
+
+export type AboutProps = {
+    age: string
+}

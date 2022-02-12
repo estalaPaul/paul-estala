@@ -14,10 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [LandingPagesController::class, 'home'])->name('home');
+Route::controller(LandingPagesController::class)->group(function () {
+    Route::get('/', 'home')->name('home');
+
+    Route::get('/about', 'about')->name('about');
+});
 
 Route::inertia('/projects', 'Home')->name('projects');
-
-Route::inertia('/about', 'Home')->name('about');
 
 Route::inertia('/contact', 'Home')->name('contact');

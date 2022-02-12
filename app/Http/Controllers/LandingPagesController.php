@@ -12,4 +12,11 @@ class LandingPagesController extends Controller
             'years' => date('Y') - date('Y', strtotime('1 June 2019'))
         ]);
     }
+
+    public function about()
+    {
+        return Inertia::render('About', [
+            'age' => date('Y') - date('Y', strtotime('September 14th, 1997'))
+        ]);
+    }
 }

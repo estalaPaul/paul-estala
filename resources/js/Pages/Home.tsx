@@ -8,7 +8,7 @@ export default function Home(props: HomeProps) {
     return (
         <div className="h-screen">
             <Unauthenticated>
-                <Head title="Home" >
+                <Head>
                     <title>Home</title>
                     <meta
                         name="description"
