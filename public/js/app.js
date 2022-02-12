@@ -2103,21 +2103,61 @@ var inertia_react_1 = __webpack_require__(/*! @inertiajs/inertia-react */ "./nod
 
 var Unauthenticated_1 = __importDefault(__webpack_require__(/*! ./Layouts/Unauthenticated */ "./resources/js/Pages/Layouts/Unauthenticated.tsx"));
 
-function Test() {
-  return (0, jsx_runtime_1.jsxs)(Unauthenticated_1["default"], {
-    children: [(0, jsx_runtime_1.jsx)(inertia_react_1.Head, {
-      title: "Welcome"
-    }, void 0), (0, jsx_runtime_1.jsx)("h1", Object.assign({
-      className: "text-red-500"
-    }, {
-      children: "Bienvenido"
-    }), void 0), (0, jsx_runtime_1.jsx)("p", {
-      children: "Hello, welcome to your first Inertia app!"
-    }, void 0)]
-  }, void 0);
+function Home(props) {
+  var years = props.years;
+  return (0, jsx_runtime_1.jsx)("div", Object.assign({
+    className: "h-screen"
+  }, {
+    children: (0, jsx_runtime_1.jsxs)(Unauthenticated_1["default"], {
+      children: [(0, jsx_runtime_1.jsxs)(inertia_react_1.Head, Object.assign({
+        title: "Home"
+      }, {
+        children: [(0, jsx_runtime_1.jsx)("title", {
+          children: "Home"
+        }, void 0), (0, jsx_runtime_1.jsx)("meta", {
+          name: "description",
+          content: "Paul Estala's portfolio website showcasing his programming and design projects, as well as his career as a Software Engineer and some of his personal hobbies."
+        }, void 0)]
+      }), void 0), (0, jsx_runtime_1.jsxs)("div", Object.assign({
+        className: "flex w-full px-24 pt-16 justify-evenly"
+      }, {
+        children: [(0, jsx_runtime_1.jsx)("div", Object.assign({
+          className: "flex items-center justify-center w-1/2 px-24 opacity-0 fade-in-delayed"
+        }, {
+          children: (0, jsx_runtime_1.jsxs)("div", {
+            children: [(0, jsx_runtime_1.jsx)("p", Object.assign({
+              className: "mb-5 text-6xl font-bold"
+            }, {
+              children: "Hey there!"
+            }), void 0), (0, jsx_runtime_1.jsxs)("p", Object.assign({
+              className: "text-xl"
+            }, {
+              children: ["I'm a ", (0, jsx_runtime_1.jsx)("span", Object.assign({
+                className: "font-semibold"
+              }, {
+                children: "software engineer"
+              }), void 0), " specializing in ", (0, jsx_runtime_1.jsx)("span", Object.assign({
+                className: "font-semibold"
+              }, {
+                children: "full stack web development"
+              }), void 0), " with ", years, " years of professional experience."]
+            }), void 0)]
+          }, void 0)
+        }), void 0), (0, jsx_runtime_1.jsx)("div", Object.assign({
+          className: "flex justify-center w-1/2"
+        }, {
+          children: (0, jsx_runtime_1.jsx)("img", {
+            className: "w-96 animate-fade-in-from-bigger",
+            src: "/img/logo.svg",
+            alt: ""
+          }, void 0)
+        }), void 0)]
+      }), void 0)]
+    }, void 0)
+  }), void 0);
 }
 
-exports["default"] = Test;
+exports["default"] = Home;
 
 /***/ }),
 
@@ -2136,22 +2176,50 @@ Object.defineProperty(exports, "__esModule", ({
 
 var jsx_runtime_1 = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
+var inertia_react_1 = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+
 function Navigation() {
   var navItems = [{
     title: 'Projects',
     path: '/projects'
+  }, {
+    title: 'About',
+    path: '/about'
+  }, {
+    title: 'Contact',
+    path: '/contact'
   }];
+
+  var isNotCurrentPath = function isNotCurrentPath(linkPath) {
+    return window.location.pathname !== linkPath;
+  };
+
   return (0, jsx_runtime_1.jsx)("nav", {
-    children: (0, jsx_runtime_1.jsx)("div", Object.assign({
-      className: "flex"
+    children: (0, jsx_runtime_1.jsxs)("div", Object.assign({
+      className: "flex items-center justify-between px-24 py-10 mb-16"
     }, {
-      children: navItems.map(function (project) {
-        return (0, jsx_runtime_1.jsx)("a", Object.assign({
-          href: project.path
+      children: [(0, jsx_runtime_1.jsx)("div", {
+        children: (0, jsx_runtime_1.jsx)(inertia_react_1.Link, Object.assign({
+          href: "/"
         }, {
-          children: project.title
-        }), project.path);
-      })
+          children: (0, jsx_runtime_1.jsx)("h1", Object.assign({
+            className: "\n                            ".concat(isNotCurrentPath('/') && 'transition-color duration-300 border-white hover:border-black', "\n                            border-b-2 text-2xl font-bold text-center\n                        ")
+          }, {
+            children: "Paul Estala"
+          }), void 0)
+        }), void 0)
+      }, void 0), (0, jsx_runtime_1.jsx)("div", Object.assign({
+        className: "flex gap-16"
+      }, {
+        children: navItems.map(function (item) {
+          return (0, jsx_runtime_1.jsx)(inertia_react_1.Link, Object.assign({
+            className: "\n                                ".concat(isNotCurrentPath(item.path) && 'text-gray transition-color duration-300 border-white hover:border-black hover:text-black', "\n                                border-b-2 text-lg font-semibold"),
+            href: item.path
+          }, {
+            children: item.title
+          }), item.path);
+        })
+      }), void 0)]
     }), void 0)
   }, void 0);
 }
@@ -2215,6 +2283,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__.createInertiaApp)({
+  title: function title(_title) {
+    return "".concat(_title, " | Paul Estala");
+  },
   resolve: function resolve(name) {
     return __webpack_require__("./resources/js/Pages sync recursive ^\\.\\/.*$")("./".concat(name));
   },

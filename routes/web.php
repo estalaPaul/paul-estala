@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LandingPagesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::inertia('/', 'Home')->name('home');
+Route::get('/', [LandingPagesController::class, 'home'])->name('home');
 
 Route::inertia('/projects', 'Home')->name('projects');
 
