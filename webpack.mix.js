@@ -16,6 +16,7 @@ mix.ts('resources/js/app.js', 'public/js')
         require('tailwindcss')
     ])
     .react()
+    .disableSuccessNotifications()
 
 if (mix.inProduction()) {
     mix.version()
