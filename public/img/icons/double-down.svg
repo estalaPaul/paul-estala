@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 10.024576 10.012288"
+   version="1.1"
+   id="svg934"
+   sodipodi:docname="reshot-icon-chevron-down-FSHYBXCQ8K.svg"
+   width="10.024576"
+   height="10.012288"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs938" />
+  <sodipodi:namedview
+     id="namedview936"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="16.020996"
+     inkscape:cx="0.031209046"
+     inkscape:cy="3.9011308"
+     inkscape:window-width="1890"
+     inkscape:window-height="1006"
+     inkscape:window-x="14"
+     inkscape:window-y="14"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Double_down" />
+  <title
+     id="title927">Artboard-59</title>
+  <g
+     id="Double_down"
+     data-name="Double down"
+     transform="translate(-6.9877118,-6.9877118)">
+    <path
+       d="m 12,17 a 1,1 0 0 1 -0.707,-0.293 l -4,-4 A 1,1 0 1 1 8.707,11.293 L 12,14.586 15.293,11.293 a 1,1 0 0 1 1.414,1.414 l -4,4 A 1,1 0 0 1 12,17 Z"
+       style="fill:#475569;fill-opacity:1"
+       id="path929" />
+    <path
+       d="m 12,13 a 1,1 0 0 1 -0.707,-0.293 l -4,-4 A 1,1 0 1 1 8.707,7.293 L 12,10.586 15.293,7.293 a 1,1 0 1 1 1.414,1.414 l -4,4 A 1,1 0 0 1 12,13 Z"
+       style="fill:#475569;fill-opacity:1"
+       id="path931" />
+  </g>
+  <metadata
+     id="metadata1020">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Artboard-59</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
