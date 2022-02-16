@@ -1,12 +1,15 @@
-import { ChildrenOnly } from '../../types/props'
+import { UnauthenticatedProps } from '../../types/props'
 import Navigation from './Components/Navigation'
 
-export default function Unauthenticated(props: ChildrenOnly) {
-    const { children } = props
+export default function Unauthenticated(props: UnauthenticatedProps) {
+    const { children, extra } = props
     return (
         <>
-            <Navigation/>
-            { children }
+            <div className="h-screen">
+                <Navigation/>
+                { children }
+            </div>
+            { extra }
         </>
     )
 }
