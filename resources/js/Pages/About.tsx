@@ -1,4 +1,5 @@
 import { Head } from '@inertiajs/inertia-react'
+import { Tech } from '../types/configs'
 import { AboutProps } from '../types/props'
 import Unauthenticated from './Layouts/Unauthenticated'
 
@@ -27,7 +28,7 @@ export default function About(props: AboutProps) {
                                 className="items-center gap-2 text-2xl text-gray border-b-2 border-white transition-color duration-300 hover:text-black hover:border-black hover:brightness-0 hover:saturate-0"
                                 href="#tech"
                             >
-                                See some of the tech I work with
+                                See some of the languages and tools I work with
                                 <img className="inline ml-2 mb-0.5" src="/img/icons/double-down.svg" alt="" />
                             </a>
                         </div>
@@ -44,12 +45,32 @@ export default function About(props: AboutProps) {
 }
 
 function AboutExtra() {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const toolsAndLanguages: Tech = require('../configs/tech.json')
     return (
         <div className="h-screen" id="tech">
-            <div className="flex items-center justify-center w-full">
-                <h2 className="text-5xl pt-10 text-center">
-                    Tech
-                </h2>
+            <div className="flex w-full px-52 justify-between items-center h-full">
+                <div className="flex items-center justify-center w-5/6 fade-in-delayed">
+                    <div>
+                        <h2 className="text-5xl font-bold">
+                            Languages and Tools
+                        </h2>
+                        <p className="text-gray text-2xl mt-5">These are some of the languages and tools that I enjoy working with and use on a regular basis.</p>
+                    </div>
+                </div>
+                <div className="flex gap-10 items-center flex-wrap justify-end ml-8">
+                    {toolsAndLanguages.map(info => (
+                        <div key={info.label} className="flex flex-col items-center">
+                            <img className={`${info.height} ${info.margin}`} src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${info.image}`} alt="" />
+                            <a
+                                href={info.url}
+                                className="text-xl text-gray border-b-2 transition-color duration-300 border-white hover:border-black hover:text-black"
+                            >
+                                {info.label}
+                            </a>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     )
