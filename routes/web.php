@@ -22,4 +22,4 @@ Route::controller(LandingPagesController::class)->group(function () {
 
 Route::inertia('/projects', 'Home')->name('projects');
 
-Route::inertia('/contact', 'Home')->name('contact');
+Route::inertia('/contact', 'Contact')->name('contact');

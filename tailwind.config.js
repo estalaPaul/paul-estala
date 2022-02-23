@@ -6,6 +6,9 @@ module.exports = {
         './resources/**/*.blade.php',
         './resources/**/*.tsx',
     ],
+    safelist: [
+        'h-20',
+    ],
     theme: {
         colors: {
             transparent: 'transparent',

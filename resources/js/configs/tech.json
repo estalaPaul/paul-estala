@@ -2,63 +2,63 @@
     {
         "image": "php/php-plain.svg",
         "label": "PHP",
-        "height": "h-32",
+        "height": "h-20",
         "margin": "",
         "url": "https://www.php.net/"
     },
     {
         "image": "javascript/javascript-original.svg",
         "label": "Javascript",
-        "height": "h-24",
+        "height": "h-20",
         "margin": "mb-6",
         "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
     },
     {
         "image": "python/python-original.svg",
         "label": "Python",
-        "height": "h-24",
+        "height": "h-20",
         "margin": "mb-6",
         "url": "https://www.python.org/"
     },
     {
         "image": "nodejs/nodejs-original.svg",
         "label": "Node.js",
-        "height": "h-24",
+        "height": "h-20",
         "margin": "mb-6",
         "url": "https://nodejs.org/en/"
     },
     {
         "image": "laravel/laravel-plain.svg",
         "label": "Laravel",
-        "height": "h-24",
+        "height": "h-20",
         "margin": "mb-6",
         "url": "https://laravel.com/"
     },
     {
         "image": "adonisjs/adonisjs-original.svg",
         "label": "AdonisJS",
-        "height": "h-24",
+        "height": "h-20",
         "margin": "mb-6",
         "url": "https://adonisjs.com/"
     },
     {
         "image": "react/react-original.svg",
         "label": "React",
-        "height": "h-24",
+        "height": "h-20",
         "margin": "mb-6",
         "url": "https://reactjs.org/"
     },
     {
         "image": "tailwindcss/tailwindcss-plain.svg",
         "label": "Tailwind CSS",
-        "height": "h-24",
+        "height": "h-20",
         "margin": "mb-6",
         "url": "https://tailwindcss.com/"
     },
     {
         "image": "mysql/mysql-original.svg",
         "label": "MySQL",
-        "height": "h-24",
+        "height": "h-20",
         "margin": "mb-6",
         "url": "https://www.mysql.com/"
     }
