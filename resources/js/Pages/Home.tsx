@@ -15,7 +15,7 @@ export default function Home(props: HomeProps) {
                 />
             </Head>
             <Unauthenticated>
-                <div className="flex w-full px-52 pt-16 justify-between">
+                <div className="flex justify-between w-full pt-16 px-52">
                     <div className="flex items-center justify-center w-1/2 opacity-0 fade-in-delayed">
                         <div>
                             <p className="mb-5 text-6xl font-bold">Hey there!</p>
