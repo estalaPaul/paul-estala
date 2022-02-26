@@ -17,7 +17,7 @@ export default function About(props: AboutProps) {
                     <div className="flex items-center justify-center w-1/2 opacity-0 fade-in-delayed">
                         <div>
                             <p className="text-2xl">
-                                I&apos;m Paul Estala, a {age} year old Software Engineer from Chihuahua, Mexico.
+                                I&apos;m Paul Estala, a {age} year old <strong>Software Engineer</strong> from Chihuahua, Mexico.
                             </p>
                             <p className="text-gray text-2xl mt-5 mb-10">
                                 Currently coding full time for a living but also as a hobby.
@@ -28,7 +28,7 @@ export default function About(props: AboutProps) {
                                 className="items-center gap-2 text-2xl text-gray border-b-2 border-white transition-color duration-300 hover:text-black hover:border-black hover:brightness-0 hover:saturate-0"
                                 href="#tech"
                             >
-                                See some of the languages and tools I work with
+                                <em>See some of the languages and tools I work with</em>
                                 <img className="inline ml-2 mb-0.5" src="/img/icons/double-down.svg" alt="" />
                             </a>
                         </div>
@@ -61,7 +61,7 @@ function AboutExtra() {
                 <div className="flex gap-10 items-center flex-wrap justify-end ml-8">
                     {toolsAndLanguages.map(info => (
                         <div key={info.label} className="flex flex-col items-center">
-                            <img className={`${info.height} ${info.margin}`} src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${info.image}`} alt="" />
+                            <img className={`${info.height} mb-6`} src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${info.image}`} alt="" />
                             <a
                                 href={info.url}
                                 className="text-xl text-gray border-b-2 transition-color duration-300 border-white hover:border-black hover:text-black"

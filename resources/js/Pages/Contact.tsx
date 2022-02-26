@@ -16,16 +16,19 @@ export default function Contact() {
                 />
             </Head>
             <Unauthenticated>
-                <div className="flex w-full px-52 pt-40 justify-between">
-                    <div className="flex items-center w-1/2 fade-in-delayed">
+                <div className="flex w-full px-52 pt-48 justify-between">
+                    <div className="flex items-center w-1/2 opacity-0 fade-in-delayed">
                         <div>
-                            <h2 className="text-5xl font-bold">You can find me on...</h2>
+                            <h2 className="text-5xl font-bold mb-5">You can find me on...</h2>
+                            <p className="text-xl">
+                                Or shoot me an email at <a className="text-gray border-b-2 border-white transition-color duration-300 hover:text-black hover:border-black" href="mailto:pestala495@tutanota.com"><em>pestala495@tutanota.com</em></a>.
+                            </p>
                         </div>
                     </div>
-                    <div className="flex gap-20 w-1/2 items-center flex-wrap justify-end">
+                    <div className="flex gap-20 w-1/2 items-center flex-wrap justify-end animate-fade-in-from-bigger">
                         {socialMedia.map(info => (
                             <div key={info.label} className="flex flex-col items-center">
-                                <img className="w-24 h-24 mb-6" src={`/img/icons/${info.image}.svg`} alt="" />
+                                <img className="w-20 h-20 mb-6" src={`/img/icons/${info.image}.svg`} alt="" />
                                 <a
                                     href={info.url}
                                     className="text-xl text-gray transition-color duration-300 border-b-2 border-white hover:border-black hover:text-black"
