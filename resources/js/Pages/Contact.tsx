@@ -16,19 +16,19 @@ export default function Contact() {
                 />
             </Head>
             <Unauthenticated>
-                <div className="flex w-full px-52 pt-48 justify-between">
-                    <div className="flex items-center w-1/2 opacity-0 fade-in-delayed">
-                        <div>
-                            <h2 className="text-5xl font-bold mb-5">You can find me on...</h2>
-                            <p className="text-xl">
+                <div className="flex flex-col w-full pt-14 justify-between md:px-16 md:flex-row lg:pt-48 xl:px-52">
+                    <div className="flex items-center w-full opacity-0 fade-in-delayed text-center mb-8 md:mb-0 md:w-1/2">
+                        <div className="w-full">
+                            <h2 className="text-4xl font-bold mb-5 md:text-5xl">You can find me on...</h2>
+                            <p className="text-xl hidden md:block">
                                 Or shoot me an email at <a className="text-gray border-b-2 border-white transition-color duration-300 hover:text-black hover:border-black" href="mailto:pestala495@tutanota.com"><em>pestala495@tutanota.com</em></a>.
                             </p>
                         </div>
                     </div>
-                    <div className="flex gap-20 w-1/2 items-center flex-wrap justify-end animate-fade-in-from-bigger">
+                    <div className="flex gap-20 w-full items-center flex-wrap justify-center animate-fade-in-from-bigger px-5 md:gap-20 md:px-0 md:w-1/2 md:justify-end">
                         {socialMedia.map(info => (
                             <div key={info.label} className="flex flex-col items-center">
-                                <img className="w-20 h-20 mb-6" src={`/img/icons/${info.image}.svg`} alt="" />
+                                <img className="w-16 h-16 mb-6 md:w-20 md:h-20" src={`/img/icons/${info.image}.svg`} alt="" />
                                 <a
                                     href={info.url}
                                     className="text-xl text-gray transition-color duration-300 border-b-2 border-white hover:border-black hover:text-black"
@@ -38,6 +38,9 @@ export default function Contact() {
                             </div>
                         ))}
                     </div>
+                    <p className="text-xl md:hidden text-center w-full mt-8">
+                        Or shoot me an email at <a className="text-gray border-b-2 border-white transition-color duration-300 hover:text-black hover:border-black" href="mailto:pestala495@tutanota.com"><em>pestala495@tutanota.com</em></a>.
+                    </p>
                 </div>
             </Unauthenticated>
         </>
