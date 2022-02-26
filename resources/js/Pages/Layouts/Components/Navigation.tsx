@@ -5,7 +5,7 @@ export default function Navigation() {
     const [ open, setOpen ] = useState(false)
 
     const navItems = [
-        { title: 'Projects', path: '/projects' },
+        { title: 'Creations', path: '/creations' },
         { title: 'About', path: '/about' },
         { title: 'Contact', path: '/contact' },
     ]

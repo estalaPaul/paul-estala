@@ -11,3 +11,10 @@ export type SocialMedia = Array<{
     label: string,
     url: string,
 }>
+
+export type Creations = Array<{
+    thumbnail: string,
+    alt: string,
+    description: string,
+    url: string,
+}>

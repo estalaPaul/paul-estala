@@ -20,6 +20,6 @@ Route::controller(LandingPagesController::class)->group(function () {
     Route::get('/about', 'about')->name('about');
 });
 
-Route::inertia('/projects', 'Home')->name('projects');
+Route::inertia('/creations', 'Creations')->name('creations');
 
 Route::inertia('/contact', 'Contact')->name('contact');
