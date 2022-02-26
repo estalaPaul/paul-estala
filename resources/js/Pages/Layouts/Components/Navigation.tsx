@@ -1,5 +1,5 @@
 import { Link } from '@inertiajs/inertia-react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Navigation() {
     const [ open, setOpen ] = useState(false)
@@ -14,9 +14,22 @@ export default function Navigation() {
         return window.location.pathname !== linkPath
     }
 
+    useEffect(() => {
+        if (open) {
+            document.body.classList.add('overflow-hidden')
+            window.scrollTo(0, 0)
+        } else {
+            document.body.classList.remove('overflow-hidden')
+        }
+
+        return () => {
+            document.body.classList.remove('overflow-hidden')
+        }
+    }, [ open ])
+
     return (
         <nav>
-            <div className="hidden items-center justify-between px-16 py-10 mb-16 md:flex lg:px-24">
+            <div className="items-center justify-between hidden px-16 py-10 mb-5 md:mb-16 md:flex lg:px-24">
                 <div>
                     <Link href="/">
                         <h1 className={`
@@ -40,8 +53,8 @@ export default function Navigation() {
                     ))}
                 </div>
             </div>
-            <div className="md:hidden p-5 flex justify-end">
-                <div className="cursor-pointer w-10 flex flex-col items-center" onClick={() => setOpen(true)}>
+            <div className="flex justify-end p-5 md:hidden">
+                <div className="flex flex-col items-center w-10 cursor-pointer" onClick={() => setOpen(true)}>
                     <img src="/img/icons/menu.svg" />
                     <p className="mt-2 text-gray">Menu</p>
                 </div>
@@ -49,11 +62,11 @@ export default function Navigation() {
                         ${open ? 'translate-x-0' : '-translate-x-full'}
                         bg-white flex flex-col z-10 p-3 h-screen w-screen absolute top-0 left-0 transition duration-300 
                     `}>
-                    <div onClick={() => setOpen(false)} className="self-end flex flex-col items-center cursor-pointer">
+                    <div onClick={() => setOpen(false)} className="flex flex-col items-center self-end cursor-pointer">
                         <img className="w-10" src="/img/icons/close.svg" />
                         <p className="mt-2 text-gray">Close</p>
                     </div>
-                    <Link className="grow-0 w-fit mb-5" href="/">
+                    <Link className="mb-5 grow-0 w-fit" href="/">
                         <h1 className={`${isNotCurrentPath('/') && 'border-white'} border-b-2 text-2xl font-bold text-center`}>
                             Paul Estala
                         </h1>
