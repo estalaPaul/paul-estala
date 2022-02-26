@@ -5,3 +5,9 @@ export type Tech = Array<{
     margin: string,
     url: string,
 }>
+
+export type SocialMedia = Array<{
+    image: string,
+    label: string,
+    url: string,
+}>
