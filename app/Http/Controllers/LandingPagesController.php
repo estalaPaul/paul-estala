@@ -10,7 +10,7 @@ class LandingPagesController extends Controller
     public function home()
     {
         return Inertia::render('Home', [
-            'years' => Carbon::now()->diffInYears(new Carbon('June 1st 2019'))
+            'years' => Carbon::now()->diffInYears(new Carbon('January 1st 2019'))
         ]);
     }
 

@@ -2,6 +2,7 @@
 
 namespace Tests\Browser;
 
+use Carbon\Carbon;
 use Laravel\Dusk\Browser;
 use Tests\Browser\Traits\HasUnauthenticatedNavBar;
 use Tests\DuskTestCase;
@@ -25,8 +26,9 @@ class AboutPageTest extends DuskTestCase
     public function test_about_page_renders_correctly()
     {
         $this->browse(function (Browser $browser) {
+            $age = Carbon::now()->diffInYears(new Carbon('September 14th 1997'));
             $browser->visit('/about')
-                    ->waitForText("I'm Paul Estala, a 24 year old Software Engineer from Chihuahua, Mexico.")
+                    ->waitForText("I'm Paul Estala, a $age year old Software Engineer from Chihuahua, Mexico.")
                     ->assertTitle('About | Paul Estala')
                     ->assertSee("Currently coding full time for a living but also as a hobby. If I'm not coding, I'm probably spending time with my family or doing some sort of exercise.")
                     ->assertSee('See some of the languages and tools I work with')
