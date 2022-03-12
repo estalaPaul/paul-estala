@@ -33,7 +33,7 @@ export default function Navigation() {
                 <div>
                     <Link href="/">
                         <h1 className={`
-                            ${isNotCurrentPath('/') && 'transition-color duration-300 border-white hover:border-black'}
+                            ${isNotCurrentPath('/') ? 'transition-color duration-300 border-white hover:border-black' : ''}
                             border-b-2 text-2xl font-bold text-center
                         `}>Paul Estala</h1>
                     </Link>
@@ -42,7 +42,7 @@ export default function Navigation() {
                     {navItems.map(item => (
                         <Link
                             className={`
-                                ${isNotCurrentPath(item.path) && 'text-gray transition-color duration-300 border-white hover:border-black hover:text-black'}
+                                ${isNotCurrentPath(item.path) ? 'text-gray transition-color duration-300 border-white hover:border-black hover:text-black' : ''}
                                 border-b-2 text-lg font-semibold`
                             }
                             key={item.path}
@@ -67,13 +67,13 @@ export default function Navigation() {
                         <p className="mt-2 text-gray">Close</p>
                     </div>
                     <Link className="mb-5 grow-0 w-fit" href="/">
-                        <h1 className={`${isNotCurrentPath('/') && 'border-white'} border-b-2 text-2xl font-bold text-center`}>
+                        <h1 className={`${isNotCurrentPath('/') ? 'border-white' : ''} border-b-2 text-2xl font-bold text-center`}>
                             Paul Estala
                         </h1>
                     </Link>
                     {navItems.map(item => (
                         <Link
-                            className={`${isNotCurrentPath(item.path) && 'text-gray border-white'} grow-0 w-fit border-b-2 text-lg font-semibold mb-5`}
+                            className={`${isNotCurrentPath(item.path) ? 'text-gray border-white' : ''} grow-0 w-fit border-b-2 text-lg font-semibold mb-5`}
                             key={item.path}
                             href={item.path}
                         >
