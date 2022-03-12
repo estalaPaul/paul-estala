@@ -23,3 +23,5 @@ Route::controller(LandingPagesController::class)->group(function () {
 Route::inertia('/creations', 'Creations')->name('creations');
 
 Route::inertia('/contact', 'Contact')->name('contact');
+
+Route::inertia('/cv', 'CV')->name('cv');
