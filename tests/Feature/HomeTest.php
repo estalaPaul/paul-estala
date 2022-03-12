@@ -15,7 +15,7 @@ class HomeTest extends TestCase
              ->assertStatus(200)
              ->assertInertia(fn (AssertableInertia $page) => $page
                 ->component('Home')
-                ->where('years', 2)
+                ->where('years', 3)
              );
     }
 }
