@@ -1,11 +1,9 @@
 import { Head } from '@inertiajs/inertia-react'
 import { Creations } from '../types/configs'
 import Unauthenticated from './Layouts/Unauthenticated'
+import creations from '../configs/creations'
 
 export default function Creations() {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const creations: Creations = require('../configs/creations.json')
-
     return (
         <>
             <Head>

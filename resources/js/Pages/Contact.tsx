@@ -1,11 +1,8 @@
 import { Head } from '@inertiajs/inertia-react'
-import { SocialMedia } from '../types/configs'
 import Unauthenticated from './Layouts/Unauthenticated'
+import socialMedia from '../configs/social-media'
 
 export default function Contact() {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const socialMedia: SocialMedia = require('../configs/social-media.json')
-
     return (
         <>
             <Head>
