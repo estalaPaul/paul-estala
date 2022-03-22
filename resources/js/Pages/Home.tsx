@@ -15,7 +15,7 @@ export default function Home(props: HomeProps) {
                 />
             </Head>
             <Unauthenticated>
-                <div className="flex-col-reverse flex justify-between w-full px-10 pt-14 md:pt-16 md:px-16 md:flex-row xl:px-52">
+                <div className="flex-col-reverse flex justify-between w-full p-10 pt-14 md:pt-16 md:px-16 md:flex-row xl:px-52">
                     <div className="flex items-center justify-center w-full opacity-0 fade-in-delayed md:w-1/2">
                         <div className="w-full text-center md:text-left">
                             <p className="mb-5 text-4xl font-bold mt-14 md:mt-0 md:text-6xl">Hey there!</p>
