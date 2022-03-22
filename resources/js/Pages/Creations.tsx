@@ -12,7 +12,7 @@ export default function Creations() {
             </Head>
             <Unauthenticated>
                 <div className="flex flex-col justify-between w-full px-10 md:px-16 lg:flex-row lg:pt-14 xl:pt-32 xl:px-52">
-                    <div className="flex items-center justify-center w-full opacity-0 fade-in-delayed lg:w-1/3">
+                    <div className="flex items-center justify-center w-full opacity-0 fade-in-delayed lg:w-1/2">
                         <div className="w-full text-center lg:text-left">
                             <p className="mt-5 mb-5 text-3xl font-bold lg:mt-0 md:text-5xl lg:mt-14">Some projects I&apos;m proud of</p>
                             <p className="text-xl">
@@ -21,12 +21,12 @@ export default function Creations() {
                             </p>
                         </div>
                     </div>
-                    <div className="flex flex-col justify-end w-full mt-5 mb-10 gap-10 animate-fade-in-from-bigger md:px-20 lg:mt-0 lg:flex-row lg:w-2/3 lg:mb-0 lg:px-10 xl:px-0">
+                    <div className="flex flex-col justify-end w-full mt-5 mb-10 gap-10 animate-fade-in-from-bigger md:px-20 lg:mt-0 lg:flex-row lg:w-1/2 lg:mb-0 lg:px-10 xl:px-0">
                         {creations.map(creation => (
                             <a
                                 href={creation.url}
                                 key={creation.thumbnail}
-                                className="w-full p-5 text-center rounded-lg shadow-md cursor-pointer transition-shadow duration-300 hover:shadow-xl lg:w-1/3 xl:p-10"
+                                className="w-full p-5 text-center rounded-lg shadow-md cursor-pointer transition-shadow duration-300 hover:shadow-xl lg:w-1/2 xl:p-10"
                             >
                                 <img src={`/img/creations/${creation.thumbnail}.webp`} alt={creation.alt}/>
                                 <p className="text-xl">{creation.description}</p>
