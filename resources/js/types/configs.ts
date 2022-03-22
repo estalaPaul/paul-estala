@@ -1,9 +1,12 @@
-export type Tech = Array<{
-    image: string,
-    label: string,
-    height: string,
-    url: string,
-}>
+export type Skills = Record<
+    'languages' | 'frameworks / libraries' | 'technologies',
+    Array<{
+        image: string,
+        label: string,
+        height: string,
+        url?: string,
+    }>
+>
 
 export type SocialMedia = Array<{
     image: string,
