@@ -5,14 +5,14 @@ namespace Tests\Feature;
 use Inertia\Testing\AssertableInertia;
 use Tests\TestCase;
 
-class CVTest extends TestCase
+class SkillsTest extends TestCase
 {
-    public function test_example()
+    public function test_skills_page_loads_correctly()
     {
-        $this->get('/cv')
+        $this->get('/skills')
              ->assertStatus(200)
              ->assertInertia(fn (AssertableInertia $page) => $page
-                ->component('CV')
+                ->component('Skills')
              );
     }
 }

@@ -6,7 +6,7 @@ export default function Navigation() {
 
     const navItems = [
         { title: 'Creations', path: '/creations' },
-        { title: 'About', path: '/about' },
+        { title: 'Skills', path: '/skills' },
         { title: 'Contact', path: '/contact' },
     ]
 

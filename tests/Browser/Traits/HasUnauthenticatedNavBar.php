@@ -10,7 +10,7 @@ trait HasUnauthenticatedNavBar
     {
         $browser->assertSeeLink('Paul Estala')
                 ->assertSeeLink('Creations')
-                ->assertSeeLink('About')
+                ->assertSeeLink('Skills')
                 ->assertSeeLink('Contact')
                 ->assertVisible('nav a[href="/"] > h1');
     }

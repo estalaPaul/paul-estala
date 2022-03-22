@@ -16,12 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(LandingPagesController::class)->group(function () {
     Route::get('/', 'home')->name('home');
-
-    Route::get('/about', 'about')->name('about');
 });
+
+Route::inertia('/skills', 'Skills')->name('skills');
 
 Route::inertia('/creations', 'Creations')->name('creations');
 
 Route::inertia('/contact', 'Contact')->name('contact');
-
-Route::inertia('/cv', 'CV')->name('cv');
