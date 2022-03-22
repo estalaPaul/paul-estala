@@ -23,8 +23,7 @@ class ContactPageTest extends DuskTestCase
             $browser->visit('/contact')
                     ->waitForText('You can find me on...')
                     ->assertTitle('Contact | Paul Estala')
-                    ->assertSee('Or shoot me an email at pestala495@tutanota.com.')
-                    ->assertVisible('nav a[href="/"] > h1');
+                    ->assertSee('Or shoot me an email at pestala495@tutanota.com.');
 
             foreach ($this->social as $social) {
                 $browser->assertSeeLink($social);

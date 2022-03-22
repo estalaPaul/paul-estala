@@ -19,8 +19,7 @@ class HomePageTest extends DuskTestCase
                     ->waitForText('Hey there!')
                     ->assertTitle('Home | Paul Estala')
                     ->assertSee("I'm a software engineer specializing in full stack web development with $years years of professional experience.")
-                    ->assertVisible('img[src="/img/logo.svg"]')
-                    ->assertVisible('nav a[href="/"] > h1');
+                    ->assertVisible('img[src="/img/logo.svg"]');
 
             $this->assertNavBarIsCorrectlyRendered($browser);
         });
