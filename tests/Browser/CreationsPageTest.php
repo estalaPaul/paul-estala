@@ -13,7 +13,7 @@ class CreationsPageTest extends DuskTestCase
     public function test_creations_page_renders_correctly()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('/creations')
+            $browser->visit(route('creations'))
                     ->waitForText("Some projects I'm proud of")
                     ->assertTitle('Creations | Paul Estala')
                     ->assertSee('A website showcasing sports uniforms created by the company Seri-Color and allowing for contact with the company.')

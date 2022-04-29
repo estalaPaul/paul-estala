@@ -28,7 +28,7 @@ class SkillsPageTest extends DuskTestCase
     public function test_skills_page_renders_correctly()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('/skills')
+            $browser->visit(route('skills'))
                     ->assertSee('Skills')
                     ->assertSee('These are some of the frameworks, languages, technologies and other things I feel I\'m good at.')
                     ->assertSee('Languages')

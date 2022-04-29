@@ -11,7 +11,7 @@ class HomeTest extends TestCase
     public function test_the_homepage_renders_correctly()
     {
         $this->travelTo(Carbon::parse('February 23rd, 2022'));
-        $this->get('/')
+        $this->get(route('home'))
              ->assertStatus(200)
              ->assertInertia(fn (AssertableInertia $page) => $page
                 ->component('Home')

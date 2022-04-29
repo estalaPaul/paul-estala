@@ -15,7 +15,7 @@ class HomePageTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $years = Carbon::now()->diffInYears(new Carbon('January 1st 2019'));
-            $browser->visit('/')
+            $browser->visit(route('home'))
                     ->waitForText('Hey there!')
                     ->assertTitle('Home | Paul Estala')
                     ->assertSee("I'm a software engineer specializing in full stack web development with $years years of professional experience.")

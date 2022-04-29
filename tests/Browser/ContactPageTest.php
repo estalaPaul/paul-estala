@@ -20,7 +20,7 @@ class ContactPageTest extends DuskTestCase
     public function test_contact_page_renders_correctly()
     {
         $this->browse(function (Browser $browser) {
-            $browser->visit('/contact')
+            $browser->visit(route('contact'))
                     ->waitForText('You can find me on...')
                     ->assertTitle('Contact | Paul Estala')
                     ->assertSee('Or shoot me an email at pestala495@tutanota.com.');
