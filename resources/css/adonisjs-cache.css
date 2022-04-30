@@ -1,12 +1,46 @@
-h2 {
-    font-size: 1.5rem;
-    line-height: 3rem;
+main p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+main a {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    transition-duration: 300ms;
+    border-color: rgb(255 255 255);
+    border-bottom-width: 2px;
+    font-style: italic;
+}
+
+main a:hover {
+    border-color: rgb(0 0 0);
+}
+
+main h2, main h3 {
     font-weight: 700;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-p {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+main h2 a, main h3 a {
+    font-style: normal;
+}
+
+main h2 {
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+main h3 {
+    font-size: 1.25rem;
+    line-height: 2.75rem;
+}
+
+main .shiki {
+    margin-top: 10px;
+    padding: 1.25rem;
+    border-radius: 0.5rem;
 }
