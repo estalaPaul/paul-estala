@@ -85,7 +85,25 @@ Similar to the `set` method, you can omit the third parameter to store until you
 ```
 import Cache from '@ioc:EstalaPaul/AdonisJSCache'
 
-await Cache.remember('key', () => {                                                                                                                                          
+await Cache.remember('key', () => {
     return 'value'
-}) // Store until explicitly delete.
+}) // Store until you explicitly delete.
+```
+
+### [Deleting Items](#deleting-items)
+
+To delete an entry, you can use the `delete` method. The method will return a boolean indicating if the deletion was completed successfully.
+
+```
+import Cache from '@ioc:EstalaPaul/AdonisJSCache'
+
+await Cache.delete('key')
+```
+
+If you'd like to remove all entries in cache, you can use the `flush` method. This removes all existing cache entries.
+
+```
+import Cache from '@ioc:EstalaPaul/AdonisJSCache'
+
+await Cache.flush()
 ```
