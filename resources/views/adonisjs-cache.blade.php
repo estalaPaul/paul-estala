@@ -17,7 +17,7 @@
         </nav>
         <main class="p-5 flex overflow-x-hidden">
             <div class="w-2/3 mx-auto">
-                <x-markdown theme="github-dark">
+                <x-markdown>
                     {!! $content !!}
                 </x-markdown>
             </div>
