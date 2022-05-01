@@ -8,18 +8,14 @@
         <link href="{{ mix('/css/adonisjs-cache.css') }}" rel="stylesheet" />
     </head>
     <body>
-        <nav>
-            <ul class="flex justify-evenly py-5 px-1">
-                <li>
-                    <h1>
-                        <a class="transition-color duration-300 border-white hover:border-black border-b-2 text-2xl font-bold text-center" href="/introduction">
-                            AdonisJS Cache
-                        </a>
-                    </h1>
-                </li>
-            </ul>
+        <nav class="text-center w-full mt-10">
+            <h1>
+                <a class="transition-color duration-300 border-white hover:border-black border-b-2 text-4xl font-bold text-center" href="/introduction">
+                    AdonisJS Cache
+                </a>
+            </h1>
         </nav>
-        <main class="px-5 flex">
+        <main class="p-5 flex overflow-x-hidden">
             <div class="w-2/3 mx-auto">
                 <x-markdown theme="github-dark">
                     {!! $content !!}
