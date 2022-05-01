@@ -10,7 +10,7 @@
     <body>
         <nav class="text-center w-full mt-10">
             <h1>
-                <a class="transition-color duration-300 border-white hover:border-black border-b-2 text-4xl font-bold text-center" href="/introduction">
+                <a class="transition-color duration-300 border-white hover:border-black border-b-2 text-4xl font-bold text-center" href="/">
                     AdonisJS Cache
                 </a>
             </h1>
