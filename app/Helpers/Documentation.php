@@ -28,5 +28,7 @@ class Documentation
         if ($this->filesystem->exists($path)) {
             return $this->filesystem->get($path);
         }
+
+        return null;
     }
 }

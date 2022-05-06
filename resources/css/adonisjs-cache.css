@@ -1,3 +1,17 @@
+main li > ul {
+    text-indent: 2em;
+}
+
+main > div > div > ul li {
+    margin-top: 5px;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+main > div > div > ul li::before {
+    content: "-";
+}
+
 main p {
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -12,21 +26,20 @@ main a {
     transition-duration: 300ms;
     border-color: rgb(255 255 255);
     border-bottom-width: 2px;
-    font-style: italic;
 }
 
 main a:hover {
     border-color: rgb(0 0 0);
 }
 
+main p a {
+    font-style: italic;
+}
+
 main h2, main h3 {
     font-weight: 700;
     margin-top: 10px;
     margin-bottom: 10px;
-}
-
-main h2 a, main h3 a {
-    font-style: normal;
 }
 
 main h2 {
