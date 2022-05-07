@@ -1,3 +1,4 @@
+import { Fragment } from 'react'
 import { Head } from '@inertiajs/inertia-react'
 import Unauthenticated from './Layouts/Unauthenticated'
 import skills from '../configs/skills'
@@ -21,7 +22,7 @@ export default function Skills() {
                     </div>
                     <div className="flex flex-col items-center justify-center w-full px-5 opacity-0 fade-in-delayed">
                         {Object.keys(skills).map(skill => (
-                            <>
+                            <Fragment key={skill}>
                                 <h3 className="text-xl font-bold mt-20 capitalize md:text-2xl lg:text-3xl">
                                     {skill}
                                 </h3>
@@ -44,7 +45,7 @@ export default function Skills() {
                                         </div>
                                     ))}
                                 </div>
-                            </>
+                            </Fragment>
                         ))}
                     </div>
                 </div>
