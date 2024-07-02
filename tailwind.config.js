@@ -1,7 +1,6 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const defaultTheme = require('tailwindcss/defaultTheme')
+import defaultTheme from 'tailwindcss/defaultTheme'
 
-module.exports = {
+export default {
     content: [
         './resources/**/*.blade.php',
         './resources/**/*.tsx',

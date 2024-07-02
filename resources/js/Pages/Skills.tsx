@@ -33,6 +33,8 @@ export default function Skills() {
                                             {info.url ? (
                                                 <a
                                                     href={info.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
                                                     className="text-xl border-b-2 border-white text-gray transition-color duration-300 hover:border-black hover:text-black"
                                                 >
                                                     {info.label}

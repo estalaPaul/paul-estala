@@ -25,6 +25,8 @@ export default function Contact() {
                             <div key={info.label} className="flex flex-col items-center">
                                 <img className="w-16 h-16 mb-6 md:w-20 md:h-20" src={`/img/icons/${info.image}.svg`} alt="" />
                                 <a
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     href={info.url}
                                     className="text-xl border-b-2 border-white text-gray transition-color duration-300 hover:border-black hover:text-black"
                                 >

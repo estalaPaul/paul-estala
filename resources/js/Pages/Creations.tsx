@@ -1,7 +1,6 @@
 import { Head } from '@inertiajs/inertia-react'
-import { Creations } from '../types/configs'
 import Unauthenticated from './Layouts/Unauthenticated'
-import creations from '../configs/creations'
+import creationsList from '../configs/creations'
 
 export default function Creations() {
     return (
@@ -18,8 +17,10 @@ export default function Creations() {
                         </div>
                     </div>
                     <div className="flex flex-col justify-end w-full mt-5 mb-10 gap-10 animate-fade-in-from-bigger md:px-20 lg:mt-0 lg:flex-row lg:mb-0 lg:px-10 xl:px-0">
-                        {creations.map(creation => (
+                        {creationsList.map(creation => (
                             <a
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 href={creation.url}
                                 key={creation.thumbnail}
                                 className="w-full p-5 text-center rounded-lg shadow-md cursor-pointer transition-shadow duration-300 hover:shadow-xl lg:w-1/2 xl:p-10"
