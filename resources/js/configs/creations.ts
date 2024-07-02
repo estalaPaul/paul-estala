@@ -8,10 +8,10 @@ const creations: Creations = [
         url: 'https://sericoloruniformes.com',
     },
     {
-        thumbnail: 'adonisjs',
-        alt: 'A preview of the documentation website for AdonisJS Cache.',
-        description: 'An open source cache provider for the Node.js framework AdonisJS.',
-        url: 'https://adonisjs-cache.estalapaul.me/home',
+        thumbnail: 'cavil',
+        alt: 'A preview of the Cavil Roping Dummies website',
+        description: 'An e-commerce website used to sell roping dummies with various payment flows, sales analytics and more.',
+        url: 'https://cavilropingdummies.com',
     },
 ]
 

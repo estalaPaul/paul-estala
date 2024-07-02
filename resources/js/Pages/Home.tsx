@@ -19,7 +19,7 @@ export default function Home(props: HomeProps) {
                     <div className="flex items-center justify-center w-full opacity-0 fade-in-delayed md:w-1/2">
                         <div className="w-full text-center md:text-left">
                             <p className="mb-5 text-4xl font-bold mt-14 md:mt-0 md:text-6xl">Hey there!</p>
-                            <p className="text-xl">
+                            <p className="text-xl md:text-2xl text-gray">
                                 I&apos;m a <span className="font-semibold">software engineer</span> specializing in <span className="font-semibold">full stack web development</span> with {years} years of professional experience.
                             </p>
                         </div>

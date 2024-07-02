@@ -29,7 +29,7 @@ const skills: Skills = {
     ],
     'frameworks / libraries': [
         {
-            image: 'laravel/laravel-plain.svg',
+            image: 'laravel/laravel-original.svg',
             label: 'Laravel',
             height: 'h-20',
             url: 'https://laravel.com/',
@@ -47,7 +47,7 @@ const skills: Skills = {
             url: 'https://reactjs.org/',
         },
         {
-            image: 'tailwindcss/tailwindcss-plain.svg',
+            image: 'tailwindcss/tailwindcss-original.svg',
             label: 'Tailwind CSS',
             height: 'h-20',
             url: 'https://tailwindcss.com/',

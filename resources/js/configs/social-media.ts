@@ -11,11 +11,6 @@ const socialMedia: SocialMedia = [
         label: 'LinkedIn',
         url: 'https://www.linkedin.com/in/paul-estala-b7544217b/',
     },
-    {
-        image: 'twitter',
-        label: 'Twitter',
-        url: 'https://twitter.com/EstalaPaul',
-    },
 ]
 
 export default socialMedia
