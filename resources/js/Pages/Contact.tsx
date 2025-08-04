@@ -36,7 +36,7 @@ export default function Contact() {
                         ))}
                     </div>
                     <p className="w-full mt-10 text-xl text-center md:text-2xl text-gray">
-                        Or shoot me an email at <a className="border-b-2 border-white text-gray transition-color duration-300 hover:text-black hover:border-black" href="mailto:pestala495@tutanota.com"><em>pestala495@tutanota.com</em></a>.
+                        Or shoot me an email at <a className="border-b-2 border-white text-gray transition-color duration-300 hover:text-black hover:border-black" href="mailto:pestala495@gmail.com"><em>pestala495@gmail.com</em></a>.
                     </p>
                 </div>
             </Unauthenticated>
